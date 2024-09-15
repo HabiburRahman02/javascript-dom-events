@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event delegate</title>
+</head>
+
+<body>
+    <h1>Event Delegate</h1>
+    <ul id="ul-container">
+        <li class="item">Lorem, ipsum dolor.</li>
+        <li class="item">Tempore, fuga voluptatum.</li>
+        <li class="item">Necessitatibus, non hic.</li>
+        <li class="item">Rerum, sapiente. Magnam?</li>
+        <li class="item">Blanditiis, tenetur perferendis.</li>
+    </ul>
+    <input type="text" id="input-field">
+    <button id="btn-add">Add new</button>
+    <script>
+        const items = document.getElementsByClassName('item');
+        // for (const item of items) {
+        //     item.addEventListener('click', function (e) {
+        //         e.target.parentNode.removeChild(e.target)
+        //     })
+        // }
+
+        document.getElementById('ul-container').addEventListener('click', function (e) {
+            e.target.parentNode.removeChild(e.target)
+        })
+
+        document.getElementById('btn-add').addEventListener('click', function () {
+            const inputField = document.getElementById('input-field');
+            const inputFieldValue = inputField.value;
+            console.log(inputFieldValue)
+
+            const ulContainer = document.getElementById('ul-container');
+            const newLi = document.createElement('li');
+            newLi.classList.add('item')
+            newLi.innerText = inputFieldValue
+            inputField.value = ''
+            ulContainer.appendChild(newLi);
+        })
+    </script>
+</body>
+
+</html>
