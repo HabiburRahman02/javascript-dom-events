@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Summary</title>
+</head>
+
+<body>
+    <h2 id="default-text">Default Text</h2>
+    <button onclick="handleOnClick()">Handle By onclick event</button>
+    <button id="even-listener">Handle by addEvent listener</button><br><br><br>
+    <div>
+        <h1 id="info">Here is update info</h1>
+        <input id="input-field" type="text">
+        <button id="btn-update">Update</button>
+    </div>
+    <script>
+        function handleOnClick() {
+            const defaultText = document.getElementById('default-text');
+            defaultText.innerText = 'Its changed by onclick event'
+        }
+
+        document.getElementById('even-listener').addEventListener('click', function () {
+            const defaultText = document.getElementById('default-text');
+            defaultText.innerText = 'Its changed add even listener'
+        })
+
+        document.getElementById('btn-update').addEventListener('click', function () {
+            const inputField = document.getElementById('input-field');
+            const fieldValue = inputField.value;
+
+            const info = document.getElementById('info');
+            info.innerText = fieldValue;
+
+            inputField.value = ''
+           
+        })
+    </script>
+
+</body>
+
+</html>
