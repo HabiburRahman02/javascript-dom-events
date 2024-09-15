@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More event</title>
+</head>
+<body>
+    <button id="btn-event">Event</button><br><br><br>
+
+    <div>
+        <input id="input-field" type="text">
+    </div>
+
+    <script>
+
+        // document.getElementById('input-field').addEventListener('keydown',function(){
+        //     const value = document.getElementById('input-field').value;
+        //     console.log(value)
+        // })
+
+        document.getElementById('input-field').addEventListener('keyup',function(e){
+            const value = e.target.value;
+            console.log(value)
+
+        })
+
+        // document.getElementById('btn-event').addEventListener('click', function(){
+        //     console.log('click event')
+        // })
+
+        // document.getElementById('btn-event').addEventListener('mouseenter', function(){
+        //     console.log('click event')
+        // })
+
+        // document.getElementById('btn-event').addEventListener('mouseleave', function(){
+        //     console.log('click event')
+        // })
+
+        // document.getElementById('btn-event').addEventListener('mousemove', function(){
+        //     console.log('click event')
+        // })
+    </script>
+</body>
+</html>
