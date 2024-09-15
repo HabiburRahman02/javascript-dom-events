@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Added new Comment</title>
+</head>
+
+<body>
+    <div id="comment-container">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo illo incidunt porro soluta? Ipsa earum delectus
+            eius dicta vitae pariatur praesentium ullam, in inventore sequi ea nulla necessitatibus quia eum cupiditate
+            dolores? Fugiat ipsam quibusdam voluptate, cumque nesciunt sapiente optio adipisci sunt recusandae
+            dignissimos voluptatum expedita! Mollitia fugit placeat qui at ut reiciendis quia commodi harum assumenda
+            itaque, velit quisquam.</p>
+
+        <p>Officia perspiciatis facilis quis voluptas voluptatem facere ipsa minima cupiditate impedit beatae?
+            Distinctio error fugit asperiores recusandae quam quas eveniet, incidunt nisi nihil vero hic nesciunt,
+            numquam aliquid quasi assumenda quibusdam, ea voluptas ducimus maiores doloribus! Earum nesciunt, excepturi
+            cumque aperiam minima molestias laborum debitis eius nihil perspiciFatis ex! Ipsa id molestiae voluptatem,
+            voluptate animi ut recusandae ab numquam vero.</p>
+
+        <p>Itaque odio repellat incidunt tempore, voluptatum eaque est sapiente, ipsa natus aut, porro deserunt iusto
+            sed quibusdam tempora nulla fugiat consequuntur dicta? Ut voluptas corrupti quisquam voluptatem quia eius
+            sequi rerum, repellendus id illo. Odit dignissimos aliquam totam, reiciendis quaerat, amet placeat quam
+            praesentium vero sit enim reprehenderit id aperiam maxime soluta eos? Quaerat ad ipsam quo nulla, fugit
+            inventore.</p>
+    </div>
+
+    <div>
+        <textarea id="comment-field" rows="10" cols="60"></textarea><br>
+        <button id="btn-comment">Add New Comment</button>
+    </div>
+    <script>
+        document.getElementById('btn-comment').addEventListener('click', function () {
+            const commentField = document.getElementById('comment-field');
+            const commentFieldValue = commentField.value;
+
+            const p = document.createElement('p');
+            p.innerText = commentFieldValue
+            const commentContainer = document.getElementById('comment-container');
+            commentContainer.appendChild(p)
+            commentField.value = ''
+        })
+    </script>
+</body>
+
+</html>
